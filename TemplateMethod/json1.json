@@ -1,0 +1,17 @@
+[
+  {
+    "id": 0,
+    "location": "Santo Domingo",
+    "temperature": 25.6
+  },
+  {
+    "id": 1,
+    "location": "Santiago",
+    "temperature": 22.1
+  },
+  {
+    "id": 2,
+    "location": "La Romana",
+    "temperature": 30.5
+  }
+]
