@@ -1,36 +1,33 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<data>
+<XmlConfigFileHelper>
 	<ConfigFile>
-		<id>1</id>
-		<location>25.5,45.3</location>
-		<date>2023-05-25</date>
-		<meassure>24.5</meassure>
+		<Id>1</Id>
+		<Location>25.5,45.3</Location>
+		<Date>2023-05-25</Date>
+		<Meassure>24.5</Meassure>
 	</ConfigFile>
 	<ConfigFile>
-		<id>2</id>
-		<location>25.5,45.3</location>
-		<date>2023-05-25</date>
-		<meassure>28.5</meassure>
+		<Id>2</Id>
+		<Location>25.5,45.3</Location>
+		<Date>2023-05-25</Date>
+		<Meassure>28.5</Meassure>
 	</ConfigFile>
 	<ConfigFile>
-		<id>3</id>
-		<location>25.5,45.3</location>
-		<date>2023-05-25</date>
-		<meassure>26.5</meassure>
+		<Id>3</Id>
+		<Location>25.5,45.3</Location>
+		<Date>2023-05-25</Date>
+		<Meassure>26.5</Meassure>
 	</ConfigFile>
 	<ConfigFile>
-		<id>4</id>
-		<location>25.5,45.3</location>
-		<date>2023-05-25</date>
-		<meassure>21.5</meassure>
+		<Id>4</Id>
+		<Location>25.5,45.3</Location>
+		<Date>2023-05-25</Date>
+		<Meassure>21.5</Meassure>
 	</ConfigFile>
 	<ConfigFile>
-		<id>5</id>
-		<location>25.5,45.3</location>
-		<date>2023-05-25</date>
-		<meassure>21.5</meassure>
+		<Id>5</Id>
+		<Location>25.5,45.3</Location>
+		<Date>2023-05-25</Date>
+		<Meassure>21.5</Meassure>
 	</ConfigFile>
-
-
-
-</data>
+</XmlConfigFileHelper>

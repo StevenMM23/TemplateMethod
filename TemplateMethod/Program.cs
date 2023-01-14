@@ -21,7 +21,6 @@ namespace TemplateMethod
 
             var XmlFile = new XmlRecordParser();
             XmlFile.OpenFile(@"C:\Users\estev\Desktop\New folder\VisualReact\TemplateMethod\TemplateMethod\XMLFile.xml");
-
         }
     }
 
@@ -67,7 +66,7 @@ namespace TemplateMethod
         public override void OpenFile(string pathName)
         {
             var file = new StreamReader(pathName);
-            var xmlSerializer = new XmlSerializer(typeof(Collection<ConfigFile>));
+            var xmlSerializer = new XmlSerializer(typeof(XmlConfigFileHelper));
 
             var xml = xmlSerializer.Deserialize(file);
 
@@ -83,7 +82,7 @@ namespace TemplateMethod
     public class XmlConfigFileHelper
     {
         // Si no funciona con IEnumerable intenta con otros tipos de iterables, incluyendo arrays
-        public IEnumerable<ConfigFile> Data { get; set; }
+        public List<ConfigFile> Data { get; set; }
     }
     //public class FlatFileRecordParser : TemperatureRecordParser
     //{
