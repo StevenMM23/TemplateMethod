@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<ConfigFile>
+		<id>1</id>
+		<location>25.5,45.3</location>
+		<date>2023-05-25</date>
+		<meassure>24.5</meassure>
+	</ConfigFile>
+	<ConfigFile>
+		<id>2</id>
+		<location>25.5,45.3</location>
+		<date>2023-05-25</date>
+		<meassure>28.5</meassure>
+	</ConfigFile>
+	<ConfigFile>
+		<id>3</id>
+		<location>25.5,45.3</location>
+		<date>2023-05-25</date>
+		<meassure>26.5</meassure>
+	</ConfigFile>
+	<ConfigFile>
+		<id>4</id>
+		<location>25.5,45.3</location>
+		<date>2023-05-25</date>
+		<meassure>21.5</meassure>
+	</ConfigFile>
+	<ConfigFile>
+		<id>5</id>
+		<location>25.5,45.3</location>
+		<date>2023-05-25</date>
+		<meassure>21.5</meassure>
+	</ConfigFile>
+
+
+
+</data>
