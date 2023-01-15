@@ -16,11 +16,11 @@ namespace TemplateMethod
     {
         private static void Main(string[] args)
         {
-            var JsonFile = new JsonRecordParser();
-            JsonFile.OpenFile(@"C:\Users\estev\Desktop\New folder\VisualReact\TemplateMethod\TemplateMethod\json1.json");
 
-            var XmlFile = new XmlRecordParser();
-            XmlFile.OpenFile(@"C:\Users\estev\Desktop\New folder\VisualReact\TemplateMethod\TemplateMethod\XMLFile.xml");
+            var FlatFile = new FlatFileRecordParser();
+            FlatFile.OpenFile(@"C:\Users\estev\Desktop\New folder\VisualReact\TemplateMethod\TemplateMethod\TextFile1.txt");
+
+            Console.ReadKey();
 
         }
     }
@@ -69,9 +69,12 @@ namespace TemplateMethod
             var file = new StreamReader(pathName);
             var xmlSerializer = new XmlSerializer(typeof(Collection<ConfigFile>));
 
-            var xml = xmlSerializer.Deserialize(file);
+            var xml = (List<ConfigFile>)xmlSerializer.Deserialize(file);
 
-            Console.WriteLine(xml);
+            foreach (var x in xml)
+            {
+                _allTemperature.Add(x.meassure);
+            }
 
             var result = Process();
             Console.WriteLine($"El promedio del archivo XML es de: {result.AvgTemp}");
@@ -80,26 +83,26 @@ namespace TemplateMethod
         }
     }
 
-    public class XmlConfigFileHelper
+
+    public class FlatFileRecordParser : TemperatureRecordParser
     {
-        // Si no funciona con IEnumerable intenta con otros tipos de iterables, incluyendo arrays
-        public IEnumerable<ConfigFile> Data { get; set; }
+        public override void OpenFile(string pathName)
+        {
+            var jsonObject = File.ReadAllText(pathName).Split('|');
+
+            _allTemperature.Add(Convert.ToDouble(jsonObject[6].Remove(jsonObject[6].Length - 1).Trim()));
+
+            _allTemperature.Add(Convert.ToDouble(jsonObject[9].Remove(jsonObject[9].Length - 1).Trim()));
+
+            _allTemperature.Add(Convert.ToDouble(jsonObject[12].Remove(jsonObject[12].Length - 1).Trim()));
+
+
+            var result = Process();
+            Console.WriteLine($"El promedio del archivo es de: {result.AvgTemp}");
+            Console.WriteLine($"El Maximo del archivo es de: {result.MaxTemp}");
+            Console.WriteLine($"El Minimo del archivo es de: {result.MinTemp}");
+        }
     }
-    //public class FlatFileRecordParser : TemperatureRecordParser
-    //{
-    //    public override void OpenFile(string pathName)
-    //    {
-    //        var jsonObject =
-    //            _allTemperature.Clear();
-
-    //        foreach (var obj in jsonObject) _allTemperature.Add(obj.meassure);
-
-    //        var result = Process();
-    //        Console.WriteLine($"El promedio del archivo es de: {result.AvgTemp}");
-    //        Console.WriteLine($"El Maximo del archivo es de: {result.MaxTemp}");
-    //        Console.WriteLine($"El Minimo del archivo es de: {result.MinTemp}");
-    //    }
-    //}
 
     public class Stats
     {
