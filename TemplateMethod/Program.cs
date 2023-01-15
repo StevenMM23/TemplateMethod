@@ -18,7 +18,7 @@ namespace TemplateMethod
         {
 
             var FlatFile = new FlatFileRecordParser();
-            FlatFile.OpenFile(@"C:\Users\estev\Desktop\New folder\VisualReact\TemplateMethod\TemplateMethod\TextFile1.txt");
+            FlatFile.OpenFile(@"C:\Users\estev\Desktop\New folder\VisualReact\TemplateMethod\TemplateMethod\sample-files\TextFile1.txt");
 
             Console.ReadKey();
 

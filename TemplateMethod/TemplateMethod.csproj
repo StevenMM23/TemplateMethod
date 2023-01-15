@@ -55,12 +55,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="json1.json" />
+    <None Include="sample-files\json1.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TextFile1.txt" />
-    <Content Include="XMLFile.xml" />
+    <Content Include="sample-files\TextFile1.txt" />
+    <Content Include="sample-files\XMLFile.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
